@@ -15,11 +15,25 @@ and the run command:
   
 Please note: for the number(number) argument to be passed into Python the "sys" and "os" library is used to read the parameter as an argument. One thing to note here is that the argument is always read as a string and that casting is needed to int in order for the script to execute.
 
-Further testing has revealed a problem with the use of np.floor_divide(). When calculating the factorial-digits for 100 the answer is 645 rather than 648. For this reason the "//" operator in python was rather used.
 
 The numpy library has problems with its floating point precision even though number is always kept at int.
 
 ![image](https://user-images.githubusercontent.com/79838587/155290982-10b7ca29-08c2-4ca7-9510-3c67b11d8538.png)
 
 
-As can be seen above with np.floor_divide the int is converted into a float which then meddles with the floating point precision of the operation.
+As can be seen above with np.floor_divide the int is converted into a float which then meddles with the floating point precision of the operation. 
+
+The same problem occurs with the np.mod function: 
+
+![image](https://user-images.githubusercontent.com/79838587/155426544-5361d0ba-1622-4179-92fd-5b3136e8dfe4.png)
+
+which is of course wrong.
+
+The best way to deal with these problems is to use the "%" operator for mod and "//" for floor divion instead of their numpy counterparts.
+In light of the assignment's instructions, all math operations should be handled by numpy.
+
+To solve this, the Fractions library is inported that is essentially a very accurate representation of a float. This helps to represent the large number as a very precise floating point number and negates the floating point precision error encountered.
+
+
+
+
