@@ -29,10 +29,10 @@ The same problem occurs with the np.mod function:
 
 which is of course wrong.
 
-The best way to deal with these problems is to use the "%" operator for mod and "//" for floor divion instead of their numpy counterparts.
-In light of the assignment's instructions, all math operations should be handled by numpy.
+The best way to deal with these problems is to use the "%" operator for mod and "//" for floor division instead of their numpy counterparts.
 
-To solve this, the Fractions library is inported that is essentially a very accurate representation of a float. This helps to represent the large number as a very precise floating point number and negates the floating point precision error encountered.
+However, based on the assignment's instructions, all math operations is to be handled and a workaround is needed.
+This is done with the Fractions library that is essentially a very accurate representation of a float type. This helps to represent the large number as a very precise floating-point number and negates the floating-point precision error encountered.
 
 
 
