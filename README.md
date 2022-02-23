@@ -11,7 +11,7 @@ The script is packaged as a docker container with the following build command:
   docker build -t factorial-digits .
   
 and the run command:
-  docker run --rm factorial-digits <number>
+  docker run --rm factorial-digits (number)
   
-Please note: for the number(<number>) argument to be passed into Python the "sys" and "os" library is used to read the parameter as an argument. One thing to note here is that the argument is always read as a string and that casting is needed to int in order for the script to execute.
+Please note: for the number(number) argument to be passed into Python the "sys" and "os" library is used to read the parameter as an argument. One thing to note here is that the argument is always read as a string and that casting is needed to int in order for the script to execute.
 
