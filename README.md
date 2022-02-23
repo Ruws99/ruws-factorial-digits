@@ -17,3 +17,5 @@ Please note: for the number(number) argument to be passed into Python the "sys" 
 
 Further testing has revealed a problem with the use of np.floor_divide(). When calculating the factorial-digits for 100 the answer is 645 rather than 648. For this reason the "//" operator in python was rather used.
 
+The numpy library has problems with its floating point precision even though number is always kept at int.
+
