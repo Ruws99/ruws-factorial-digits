@@ -19,3 +19,7 @@ Further testing has revealed a problem with the use of np.floor_divide(). When c
 
 The numpy library has problems with its floating point precision even though number is always kept at int.
 
+![image](https://user-images.githubusercontent.com/79838587/155290982-10b7ca29-08c2-4ca7-9510-3c67b11d8538.png)
+
+
+As can be seen above with np.floor_divide the int is converted into a float which then meddles with the floating point precision of the operation.
