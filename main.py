@@ -2,6 +2,7 @@
 import os
 import sys
 import numpy as np
+from fractions import Fraction #Fraction library to have very precise float.
 
 # Read argument passed in docker run command
 number=sys.argv[1]
@@ -12,14 +13,14 @@ if number.isdigit():
     number=int(number)
 
     # Compute factorial
-    fact=np.math.factorial(number)
+    fact=Fraction(np.math.factorial(number))    #Represent as Fraction
 
     total=0
     while fact>0:
         total=total+np.mod(fact,10)     # Shift right digits through mod 10
-        fact=fact//10   # Get rid of remainders
+        fact= Fraction(np.floor_divide(fact,10))    # Get rid of remainders
 
-    print(round(total))
+    print(total)
     
 else:
     print("Enter a positive integer")
