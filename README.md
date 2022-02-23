@@ -15,19 +15,20 @@ and the run command:
   
 Please note: for the number(number) argument to be passed into Python the "sys" and "os" library is used to read the parameter as an argument. One thing to note here is that the argument is always read as a string and that casting is needed to int in order for the script to execute.
 
+While testing the following problems was encountered:
 
 The numpy library has problems with its floating point precision even though number is always kept at int.
 
 ![image](https://user-images.githubusercontent.com/79838587/155290982-10b7ca29-08c2-4ca7-9510-3c67b11d8538.png)
 
 
-As can be seen above with np.floor_divide the int is converted into a float which then meddles with the floating point precision of the operation. 
+As can be seen above with np.floor_divide the int is converted into a float which then decreases the floating point precision of the operation. 
 
 The same problem occurs with the np.mod function: 
 
 ![image](https://user-images.githubusercontent.com/79838587/155426544-5361d0ba-1622-4179-92fd-5b3136e8dfe4.png)
 
-which is of course wrong.
+Here taking the modulus 10 of the large int returns the wrong answer.
 
 The best way to deal with these problems is to use the "%" operator for mod and "//" for floor division instead of their numpy counterparts.
 
