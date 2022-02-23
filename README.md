@@ -15,3 +15,5 @@ and the run command:
   
 Please note: for the number(number) argument to be passed into Python the "sys" and "os" library is used to read the parameter as an argument. One thing to note here is that the argument is always read as a string and that casting is needed to int in order for the script to execute.
 
+Further testing has revealed a problem with the use of np.floor_divide(). When calculating the factorial-digits for 100 the answer is 645 rather than 648. For this reason the "//" operator in python was rather used.
+
